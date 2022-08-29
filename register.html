@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-color: black;
+    }
+    div {
+      color: white;
+    }
+    label {
+      color: white;
+    }
+    input.btn {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    input.btnlogout {
+      background-color: red;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+  <body>
+    <div align="center">
+      <form action="{{ url_for('register') }}" , method="post">
+        <div class="msg">{{ message }}</div>
+        <br />
+        <br />
+        <label for="firstName">First name:</label><br />
+        <input type="text" id="firstName" name="firstName" value="" /><br />
+        <label for="lastName">Last name:</label><br />
+        <input type="text" id="lastName" name="lastName" value="" /><br /><br />
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+      <p class="bottom">
+        Acccount Created ?
+        <a class="bottom" href="{{url_for('login')}}"> Login</a>
+      </p>
+    </div>
+  </body>
+</html>

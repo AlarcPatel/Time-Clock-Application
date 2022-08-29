@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-color: black;
+    }
+    h1 {
+      color: white;
+    }
+    input.btnmyData {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    input.btnactivity {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    input.btnlogout {
+      background-color: red;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div align="center">
+      <div align="center" class="border">
+        <div class="header">
+          <h1 class="word">Welcome to Employee Dashboard</h1>
+        </div>
+        <h2 class="word">
+          <form
+            action="{{ url_for('data', employeeId=employeeId) }}"
+            method="post"
+          >
+            <input type="submit" class="btnmyData" value="MyData" /><br />
+          </form>
+          <form
+            action="{{ url_for('activity', employeeId=employeeId) }}"
+            method="post"
+          >
+            <input type="submit" class="btnactivity" value="Activity" /><br />
+          </form>
+        </h2>
+        <form
+          action="{{ url_for('login', employeeId=employeeId) }}"
+          method="post"
+        >
+          <input type="submit" class="btnlogout" value="Logout" /><br />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

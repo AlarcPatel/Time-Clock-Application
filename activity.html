@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    input.btn {
+      background-color: #4caf50;
+      border: 10;
+      margin-bottom: 20px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    input.btnback {
+      background-color: #4caf50;
+      border: 10;
+      margin-bottom: 20px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    body {
+      background-color: black;
+    }
+    h1 {
+      color: white;
+    }
+    h2 {
+      color: white;
+    }
+  </style>
+  <head>
+    <title>Activity</title>
+  </head>
+  <body>
+    <div align="center">
+      <div class="header">
+        <h1 class="word">Welcome to Your Activity</h1>
+        <h2>{{ message }}</h2>
+      </div>
+      <br />
+      <form
+        action="{{ url_for('activity', employeeId=employeeId) }}"
+        method="post"
+      >
+        <input
+          type="submit"
+          name="startTime"
+          class="btn"
+          value="Start Shift"
+        /><br />
+        <input
+          type="submit"
+          name="endTime"
+          class="btn"
+          value="End Shift"
+        /><br />
+        <input
+          type="submit"
+          name="startLunchTime"
+          class="btn"
+          value="Start Lunch Break"
+        /><br />
+        <input
+          type="submit"
+          name="endLunchTime"
+          class="btn"
+          value="End Lunch Break"
+        /><br />
+        <input
+          type="submit"
+          name="startBreakTime"
+          class="btn"
+          value="Start Break"
+        /><br />
+        <input
+          type="submit"
+          name="endBreakTime"
+          class="btn"
+          value="End Break"
+        /><br />
+      </form>
+      <form
+        action="{{ url_for('dashboard', employeeId=employeeId) }}"
+        method="post"
+      >
+        <input type="submit" class="btnback" value="Back" /><br />
+      </form>
+    </div>
+  </body>
+</html>
