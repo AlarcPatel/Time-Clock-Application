@@ -1,0 +1,13 @@
+ Time clock application: 
+
+
+ Connect to DB: Run "Database.py" to Connect and setup Database
+
+
+ To Run application: Run: -> export FLASK_APP=app.py
+                          -> flask run
+
+
+Languages and framework: 
+
+Flask (any versoin), Jinja2 (any version), Python3 (any version), HTML/CSS 
